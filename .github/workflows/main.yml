@@ -2,8 +2,12 @@ on:  # yamllint disable-line rule:truthy
   workflow_dispatch:
 
 name: Copy Distribution
+permissions: {}
+
 jobs:
   copy:
+    permissions:
+      packages: write
     name: Copy to registry
     runs-on: ubuntu-latest
     steps:
